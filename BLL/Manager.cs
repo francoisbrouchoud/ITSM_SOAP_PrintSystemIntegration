@@ -9,6 +9,8 @@ namespace BLL
 {
     public class Manager : IManager
     {
+
+
         private const double rate = 0.08;
         ISapDB SapDb { get; }
         IPrintAccountDB PrintAccountDb { get; }
@@ -17,6 +19,7 @@ namespace BLL
             SapDb = sapDb;
             PrintAccountDb = printAccountDb;
         }
+
         private double ConvertChfToQuantity(double amoutChf)
         {
             return amoutChf / rate;

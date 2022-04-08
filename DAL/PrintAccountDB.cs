@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class PrintAccountDB
+    public class PrintAccountDB:IPrintAccountDB
     {
         string ConnectionString { get; }
 
