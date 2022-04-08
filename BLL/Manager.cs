@@ -27,7 +27,6 @@ namespace BLL
 
         public void AddChfByUsername(string username, double amountChf)
         {
-
             PrintAccountDb.AddChfByUsername(username, amountChf);
         }
 
