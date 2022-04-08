@@ -26,7 +26,11 @@ namespace PrintPaymentSystem_Demo
             string account = txtAccount.Text;
             decimal amount = client.GetChfByUsername(account);
             decimal quantity = client.GetQuantityByUsername(account);
-            MessageBox.Show($"{account} possède CHF {amount} et peut imprimer {quantity} feuilles.");
+            if(amount < 0)
+                MessageBox.Show($"{account} n'existe pas");
+            else
+                MessageBox.Show($"{account} possède CHF {amount} et peut imprimer {quantity} feuilles.");
+
         }
 
         private void btnAddAmount_Click(object sender, EventArgs e)
