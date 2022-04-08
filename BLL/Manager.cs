@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class Manager
+    public class Manager : IManager
     {
         private const double rate = 0.08;
         ISapDB SapDb { get; }
@@ -17,8 +17,9 @@ namespace BLL
             SapDb = sapDb;
             PrintAccountDb = printAccountDb;
         }
-        private double ConvertChfToQuantity(double amoutChf) {
-            return amoutChf/rate;
+        private double ConvertChfToQuantity(double amoutChf)
+        {
+            return amoutChf / rate;
         }
 
         public void AddChfByUsername(string username, double amountChf)
@@ -41,7 +42,7 @@ namespace BLL
 
         public double GetChfbyUsername(string username)
         {
-            return PrintAccountDb.GetChfByUsername(username); 
+            return PrintAccountDb.GetChfByUsername(username);
         }
 
 
