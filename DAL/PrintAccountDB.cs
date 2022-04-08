@@ -23,7 +23,8 @@ namespace DAL
                 using (SqlConnection cn = new SqlConnection(ConnectionString))
                 {
                     string query = @"UPDATE PrintAccount 
-                                       SET Amount = Amount + @AmountToAdd;
+                                       SET Amount = Amount + @AmountToAdd
+                                       FROM PrintAccount
                                        WHERE Username = @Username";
                     SqlCommand cmd = new SqlCommand(query, cn);
                     cmd.Parameters.AddWithValue("Username", username);
@@ -49,7 +50,7 @@ namespace DAL
             {
                 using (SqlConnection cn = new SqlConnection(ConnectionString))
                 {
-                    string query = "SELECT Amount FROM Username = @Username";
+                    string query = "SELECT Amount FROM PrintAccount WHERE Username = @Username";
                     SqlCommand cmd = new SqlCommand(query, cn);
                     cmd.Parameters.AddWithValue("Username", username);
 
