@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPrintAccountDB.cs" />
+    <Compile Include="ISapDB.cs" />
     <Compile Include="PrintAccountDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SapDB.cs" />

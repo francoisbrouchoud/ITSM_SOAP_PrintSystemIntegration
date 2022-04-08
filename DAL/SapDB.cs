@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class SapDB
+    public class SapDB : ISapDB
     {
         string ConnectionString { get; }
         public SapDB()
@@ -17,34 +17,34 @@ namespace DAL
         }
         public string GetUsernameByCardId(int cardId)
         {
-			string result = null;
+            string result = null;
 
-			try
-			{
-				using (SqlConnection cn = new SqlConnection(ConnectionString))
-				{
-					string query = @"SELECT Username FROM SAP
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(ConnectionString))
+                {
+                    string query = @"SELECT Username FROM SAP
 							WHERE CardId = @cardId";
-					SqlCommand cmd = new SqlCommand(query, cn);
-					cmd.Parameters.AddWithValue("@cardId", cardId);
-					cn.Open();
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@cardId", cardId);
+                    cn.Open();
 
-					using (SqlDataReader dr = cmd.ExecuteReader())
-					{
-						if (dr.Read())
-						{
-							result = dr["Username"].ToString();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            result = dr["Username"].ToString();
 
-						}
-					}
-				}
-			}
-			catch (Exception e)
-			{
-				throw e;
-			}
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
 
-			return result;
-		}
+            return result;
+        }
     }
 }
