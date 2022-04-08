@@ -24,8 +24,8 @@ namespace PrintPaymentSystem_Demo
         private void btnShowAccount_Click(object sender, EventArgs e)
         {
             string account = txtAccount.Text;
-            double amount = client.GetChfByUsername(account);
-            double quantity = client.GetQuantityByUsername(account);
+            decimal amount = client.GetChfByUsername(account);
+            decimal quantity = client.GetQuantityByUsername(account);
             MessageBox.Show($"{account} possède CHF {amount} et peut imprimer {quantity} feuilles.");
         }
 
@@ -33,7 +33,7 @@ namespace PrintPaymentSystem_Demo
         {
             string account = txtAccount.Text;
 
-            double amount = Convert.ToDouble(txtAmount.Text);
+            decimal amount = Convert.ToDecimal(txtAmount.Text);
             int cardId;
             if(int.TryParse(account, out cardId))
             {

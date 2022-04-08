@@ -16,28 +16,28 @@ namespace PrintPaymentSystem_Demo.ServicePrintPayment {
     public interface IPrintPaymentService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByCardId", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByCardIdResponse")]
-        void AddChfByCardId(int cardId, double chf);
+        void AddChfByCardId(int cardId, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByCardId", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByCardIdResponse")]
-        System.Threading.Tasks.Task AddChfByCardIdAsync(int cardId, double chf);
+        System.Threading.Tasks.Task AddChfByCardIdAsync(int cardId, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse")]
-        void AddChfByUsername(string username, double chf);
+        void AddChfByUsername(string username, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/AddChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse")]
-        System.Threading.Tasks.Task AddChfByUsernameAsync(string username, double chf);
+        System.Threading.Tasks.Task AddChfByUsernameAsync(string username, decimal chf);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetQuantityByUsernameResponse")]
-        double GetQuantityByUsername(string username);
+        decimal GetQuantityByUsername(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetQuantityByUsernameResponse")]
-        System.Threading.Tasks.Task<double> GetQuantityByUsernameAsync(string username);
+        System.Threading.Tasks.Task<decimal> GetQuantityByUsernameAsync(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetChfByUsernameResponse")]
-        double GetChfByUsername(string username);
+        decimal GetChfByUsername(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrintPaymentService/GetChfByUsername", ReplyAction="http://tempuri.org/IPrintPaymentService/GetChfByUsernameResponse")]
-        System.Threading.Tasks.Task<double> GetChfByUsernameAsync(string username);
+        System.Threading.Tasks.Task<decimal> GetChfByUsernameAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,35 +67,35 @@ namespace PrintPaymentSystem_Demo.ServicePrintPayment {
                 base(binding, remoteAddress) {
         }
         
-        public void AddChfByCardId(int cardId, double chf) {
+        public void AddChfByCardId(int cardId, decimal chf) {
             base.Channel.AddChfByCardId(cardId, chf);
         }
         
-        public System.Threading.Tasks.Task AddChfByCardIdAsync(int cardId, double chf) {
+        public System.Threading.Tasks.Task AddChfByCardIdAsync(int cardId, decimal chf) {
             return base.Channel.AddChfByCardIdAsync(cardId, chf);
         }
         
-        public void AddChfByUsername(string username, double chf) {
+        public void AddChfByUsername(string username, decimal chf) {
             base.Channel.AddChfByUsername(username, chf);
         }
         
-        public System.Threading.Tasks.Task AddChfByUsernameAsync(string username, double chf) {
+        public System.Threading.Tasks.Task AddChfByUsernameAsync(string username, decimal chf) {
             return base.Channel.AddChfByUsernameAsync(username, chf);
         }
         
-        public double GetQuantityByUsername(string username) {
+        public decimal GetQuantityByUsername(string username) {
             return base.Channel.GetQuantityByUsername(username);
         }
         
-        public System.Threading.Tasks.Task<double> GetQuantityByUsernameAsync(string username) {
+        public System.Threading.Tasks.Task<decimal> GetQuantityByUsernameAsync(string username) {
             return base.Channel.GetQuantityByUsernameAsync(username);
         }
         
-        public double GetChfByUsername(string username) {
+        public decimal GetChfByUsername(string username) {
             return base.Channel.GetChfByUsername(username);
         }
         
-        public System.Threading.Tasks.Task<double> GetChfByUsernameAsync(string username) {
+        public System.Threading.Tasks.Task<decimal> GetChfByUsernameAsync(string username) {
             return base.Channel.GetChfByUsernameAsync(username);
         }
     }

@@ -11,7 +11,7 @@ namespace BLL
     {
 
 
-        private const double rate = 0.08;
+        private const decimal rate = 0.08m;
         ISapDB SapDb { get; }
         IPrintAccountDB PrintAccountDb { get; }
         public Manager(ISapDB sapDb, IPrintAccountDB printAccountDb)
@@ -20,29 +20,29 @@ namespace BLL
             PrintAccountDb = printAccountDb;
         }
 
-        private double ConvertChfToQuantity(double amoutChf)
+        private decimal ConvertChfToQuantity(decimal amoutChf)
         {
             return amoutChf / rate;
         }
 
-        public void AddChfByUsername(string username, double amountChf)
+        public void AddChfByUsername(string username, decimal amountChf)
         {
             PrintAccountDb.AddChfByUsername(username, amountChf);
         }
 
-        public void AddChfByCardId(int cardId, double amountChf)
+        public void AddChfByCardId(int cardId, decimal amountChf)
         {
             string username = SapDb.GetUsernameByCardId(cardId);
             PrintAccountDb.AddChfByUsername(username, amountChf);
         }
 
-        public double GetQuantityByUsername(string username)
+        public decimal GetQuantityByUsername(string username)
         {
-            double amount = PrintAccountDb.GetChfByUsername(username);
+            decimal amount = PrintAccountDb.GetChfByUsername(username);
             return ConvertChfToQuantity(amount);
         }
 
-        public double GetChfbyUsername(string username)
+        public decimal GetChfbyUsername(string username)
         {
             return PrintAccountDb.GetChfByUsername(username);
         }

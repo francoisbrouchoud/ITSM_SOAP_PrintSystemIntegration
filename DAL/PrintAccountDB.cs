@@ -16,7 +16,7 @@ namespace DAL
         {
             ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
         }
-        public bool AddChfByUsername(string username, double amount)
+        public bool AddChfByUsername(string username, decimal amount)
         {
             try
             {
@@ -43,9 +43,9 @@ namespace DAL
         }
 
 
-        public double GetChfByUsername(string username)
+        public decimal GetChfByUsername(string username)
         {
-            double amount = -1.0;
+            decimal amount = -1;
             try
             {
                 using (SqlConnection cn = new SqlConnection(ConnectionString))
@@ -60,7 +60,7 @@ namespace DAL
                         if (dr.Read())
                         {
                             if (dr["Amount"] != DBNull.Value)
-                                amount = (double)dr["Amount"];
+                                amount = (decimal)dr["Amount"];
                         }
                     }
                 }

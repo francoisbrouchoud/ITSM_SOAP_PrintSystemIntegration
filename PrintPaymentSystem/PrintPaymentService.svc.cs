@@ -21,22 +21,22 @@ namespace PrintPaymentSystem
             manager = new Manager(sapDB, printAccountDB);
         }
 
-        public void AddChfByCardId(int cardId, double chf)
+        public void AddChfByCardId(int cardId, decimal chf)
         {
             manager.AddChfByCardId(cardId, chf);
         }
 
-        public void AddChfByUsername(string username, double chf)
+        public void AddChfByUsername(string username, decimal chf)
         {
             manager.AddChfByUsername(username, chf);
         }
 
-        public double GetChfByUsername(string username)
+        public decimal GetChfByUsername(string username)
         {
             return manager.GetChfbyUsername(username);
         }
 
-        public double GetQuantityByUsername(string username)
+        public decimal GetQuantityByUsername(string username)
         {
             return manager.GetQuantityByUsername(username);
         }

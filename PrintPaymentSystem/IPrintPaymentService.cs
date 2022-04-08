@@ -12,13 +12,13 @@ namespace PrintPaymentSystem
     public interface IPrintPaymentService
     {
         [OperationContract]
-        void AddChfByCardId(int cardId, double chf);
+        void AddChfByCardId(int cardId, decimal chf);
         [OperationContract]
-        void AddChfByUsername(string username, double chf);
+        void AddChfByUsername(string username, decimal chf);
         [OperationContract]
-        double GetQuantityByUsername(string username);
+        decimal GetQuantityByUsername(string username);
         [OperationContract]
-        double GetChfByUsername(string username);
+        decimal GetChfByUsername(string username);
         
 
     }

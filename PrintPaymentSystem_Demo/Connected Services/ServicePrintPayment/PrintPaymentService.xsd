@@ -4,7 +4,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="cardId" type="xs:int" />
-        <xs:element minOccurs="0" name="chf" type="xs:double" />
+        <xs:element minOccurs="0" name="chf" type="xs:decimal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -17,7 +17,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="chf" type="xs:double" />
+        <xs:element minOccurs="0" name="chf" type="xs:decimal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -36,7 +36,7 @@
   <xs:element name="GetQuantityByUsernameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetQuantityByUsernameResult" type="xs:double" />
+        <xs:element minOccurs="0" name="GetQuantityByUsernameResult" type="xs:decimal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -50,7 +50,7 @@
   <xs:element name="GetChfByUsernameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetChfByUsernameResult" type="xs:double" />
+        <xs:element minOccurs="0" name="GetChfByUsernameResult" type="xs:decimal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
