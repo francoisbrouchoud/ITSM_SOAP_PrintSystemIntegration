@@ -8,7 +8,8 @@ namespace DTO
 {
     class Sap
     {
-        int Uid { get; set; }
+        int UId { get; set; }
+        int CardId { get; set; }
         string Username { get; set; }
 
     }
