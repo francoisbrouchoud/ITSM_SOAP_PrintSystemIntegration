@@ -11,7 +11,7 @@ namespace PrintPaymentSystem
     // NOTE: In order to launch WCF Test Client for testing this service, please select PrintPaymentService.svc or PrintPaymentService.svc.cs at the Solution Explorer and start debugging.
     public class PrintPaymentService : IPrintPaymentService
     {
-        public void AddChfByUid(int uid, double chf)
+        public void AddChfByCardId(int cardId, double chf)
         {
             throw new NotImplementedException();
         }

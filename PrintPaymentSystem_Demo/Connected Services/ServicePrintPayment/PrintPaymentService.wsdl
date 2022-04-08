@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PrintPaymentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPrintPaymentService_AddChfByCardId_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddChfByCardId" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_AddChfByCardId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddChfByCardIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_AddChfByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddChfByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_AddChfByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddChfByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_GetQuantityByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuantityByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_GetQuantityByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuantityByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_GetChfByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChfByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPrintPaymentService_GetChfByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChfByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPrintPaymentService">
+    <wsdl:operation name="AddChfByCardId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/AddChfByCardId" message="tns:IPrintPaymentService_AddChfByCardId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/AddChfByCardIdResponse" message="tns:IPrintPaymentService_AddChfByCardId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddChfByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/AddChfByUsername" message="tns:IPrintPaymentService_AddChfByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/AddChfByUsernameResponse" message="tns:IPrintPaymentService_AddChfByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername" message="tns:IPrintPaymentService_GetQuantityByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/GetQuantityByUsernameResponse" message="tns:IPrintPaymentService_GetQuantityByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChfByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintPaymentService/GetChfByUsername" message="tns:IPrintPaymentService_GetChfByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintPaymentService/GetChfByUsernameResponse" message="tns:IPrintPaymentService_GetChfByUsername_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPrintPaymentService" type="tns:IPrintPaymentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddChfByCardId">
+      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/AddChfByCardId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddChfByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/AddChfByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/GetQuantityByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChfByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPrintPaymentService/GetChfByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrintPaymentService">
+    <wsdl:port name="BasicHttpBinding_IPrintPaymentService" binding="tns:BasicHttpBinding_IPrintPaymentService">
+      <soap:address location="http://153.109.124.35:83/Brouchoud_Vialard_PrintPaymentSystem/PrintPaymentService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
