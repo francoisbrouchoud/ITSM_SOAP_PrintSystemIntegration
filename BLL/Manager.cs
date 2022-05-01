@@ -20,6 +20,11 @@ namespace BLL
             PrintAccountDb = printAccountDb;
         }
 
+        /// <summary>
+        /// Calcule permetant de convertir les CHF en quantité
+        /// </summary>
+        /// <param name="amoutChf"></param>
+        /// <returns></returns>
         private decimal ConvertChfToQuantity(decimal amoutChf)
         {
             return amoutChf / rate;

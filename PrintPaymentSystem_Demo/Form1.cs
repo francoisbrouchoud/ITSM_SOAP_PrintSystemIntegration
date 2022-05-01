@@ -26,6 +26,7 @@ namespace PrintPaymentSystem_Demo
             string account = txtAccount.Text;
             decimal amount = client.GetChfByUsername(account);
             decimal quantity = client.GetQuantityByUsername(account);
+            // Contrôle dans le cas où le montant est négatif c'est car l'utilisateur n'existe pas
             if(amount < 0)
                 MessageBox.Show($"{account} n'existe pas");
             else
@@ -39,6 +40,7 @@ namespace PrintPaymentSystem_Demo
 
             decimal amount = Convert.ToDecimal(txtAmount.Text);
             int cardId;
+            // on essaie de convertir en nombre si c'est le cas c'est la cardId sinon c'est le username
             if(int.TryParse(account, out cardId))
             {
                 client.AddChfByCardId(cardId, amount);

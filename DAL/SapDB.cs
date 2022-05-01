@@ -15,6 +15,11 @@ namespace DAL
         {
             ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
         }
+		/// <summary>
+		/// Permet de connaitre la correspondance d'une card id pour un username
+		/// </summary>
+		/// <param name="cardId"></param>
+		/// <returns></returns>
         public string GetUsernameByCardId(int cardId)
         {
 			string result = null;
