@@ -7,7 +7,6 @@ using System.Text;
 
 namespace PrintPaymentSystem
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IPrintPaymentService" in both code and config file together.
     [ServiceContract]
     public interface IPrintPaymentService
     {
@@ -18,8 +17,6 @@ namespace PrintPaymentSystem
         [OperationContract]
         decimal GetQuantityByUsername(string username);
         [OperationContract]
-        decimal GetChfByUsername(string username);
-        
-
+        decimal GetChfByUsername(string username); 
     }
 }

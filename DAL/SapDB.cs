@@ -16,10 +16,10 @@ namespace DAL
             ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
         }
 		/// <summary>
-		/// Permet de connaitre la correspondance d'une card id pour un username
+		/// Permet de connaître la correspondance d'un cardId pour un username
 		/// </summary>
 		/// <param name="cardId"></param>
-		/// <returns></returns>
+		/// <returns>Retourn null si le cardId n'existe pas.</returns>
         public string GetUsernameByCardId(int cardId)
         {
 			string result = null;
@@ -39,7 +39,6 @@ namespace DAL
 						if (dr.Read())
 						{
 							result = dr["Username"].ToString();
-
 						}
 					}
 				}

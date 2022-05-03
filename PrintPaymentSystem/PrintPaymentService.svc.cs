@@ -20,40 +20,40 @@ namespace PrintPaymentSystem
         }
 
         /// <summary>
-        /// Permet d'ajouter des sous à partir de la carte id
+        /// Permet d'ajouter un montant en CHF à partir du cardId
         /// </summary>
-        /// <param name="cardId">le numero de carte</param>
-        /// <param name="chf">le montant à ajouter</param>
+        /// <param name="cardId">le numéro de la carte</param>
+        /// <param name="chf">le montant en CHF à ajouter</param>
         public void AddChfByCardId(int cardId, decimal chf)
         {
             manager.AddChfByCardId(cardId, chf);
         }
 
         /// <summary>
-        /// Permet d'ajouter des sous à partir de l'utilisateur
+        /// Permet d'ajouter un montant en CHF à partir d'un utilisateur
         /// </summary>
         /// <param name="username">le nom de l'utilisateur</param>
-        /// <param name="chf">le montant à ajouter</param>
+        /// <param name="chf">le montant en CHF à ajouter</param>
         public void AddChfByUsername(string username, decimal chf)
         {
             manager.AddChfByUsername(username, chf);
         }
 
         /// <summary>
-        /// Permet de connaître le montant du compte 
+        /// Permet de connaître le montant en CHF du compte à partir d'un utilisateur
         /// </summary>
         /// <param name="username">le nom de l'utilisateur</param>
-        /// <returns>le nombre d'argent qu'il y a sur le compte. Si c'est un nombre négatif ça veut dire que nous n'avons pas trouver le compte.</returns>
+        /// <returns>Le montant en CHF disponible sur le compte. Si le montant est négatif, cela signifie que le compte n'a pas été trouvé.</returns>
         public decimal GetChfByUsername(string username)
         {
             return manager.GetChfbyUsername(username);
         }
 
         /// <summary>
-        /// Permet de connaître le nombre d'impression disponnible pour le compte
+        /// Permet de connaître le nombre d'impressions disponnibles pour le compte à partir d'un utilisateur
         /// </summary>
         /// <param name="username">le nom de l'utilisateur</param>
-        /// <returns>le nombre de photocopie disponnible sur le compte. Si c'est un nombre négatif ça veut dire que nous n'avons pas trouver le compte.</returns>
+        /// <returns>Le nombre d'impressions disponible sur le compte. Si le nombre est négatif, cela signifie que le compte n'a pas été trouvé.</returns>
         public decimal GetQuantityByUsername(string username)
         {
             return manager.GetQuantityByUsername(username);

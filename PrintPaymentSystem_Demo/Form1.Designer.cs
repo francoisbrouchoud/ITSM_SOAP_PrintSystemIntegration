@@ -39,9 +39,9 @@ namespace PrintPaymentSystem_Demo
             // 
             // btnShowAccount
             // 
-            this.btnShowAccount.Location = new System.Drawing.Point(187, 215);
+            this.btnShowAccount.Location = new System.Drawing.Point(180, 215);
             this.btnShowAccount.Name = "btnShowAccount";
-            this.btnShowAccount.Size = new System.Drawing.Size(366, 68);
+            this.btnShowAccount.Size = new System.Drawing.Size(373, 68);
             this.btnShowAccount.TabIndex = 0;
             this.btnShowAccount.Text = "Afficher les informations du compte";
             this.btnShowAccount.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@ namespace PrintPaymentSystem_Demo
             // 
             // btnAddAmount
             // 
-            this.btnAddAmount.Location = new System.Drawing.Point(187, 289);
+            this.btnAddAmount.Location = new System.Drawing.Point(180, 289);
             this.btnAddAmount.Name = "btnAddAmount";
-            this.btnAddAmount.Size = new System.Drawing.Size(366, 68);
+            this.btnAddAmount.Size = new System.Drawing.Size(373, 68);
             this.btnAddAmount.TabIndex = 1;
             this.btnAddAmount.Text = "Recharger le compte";
             this.btnAddAmount.UseVisualStyleBackColor = true;
@@ -74,20 +74,20 @@ namespace PrintPaymentSystem_Demo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 120);
+            this.label1.Location = new System.Drawing.Point(176, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 20);
+            this.label1.Size = new System.Drawing.Size(201, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Username ou card Id";
+            this.label1.Text = "Username ou Id de la carte";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 163);
+            this.label2.Location = new System.Drawing.Point(176, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(127, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Montant";
+            this.label2.Text = "Montant en CHF";
             // 
             // Form1
             // 
@@ -101,7 +101,7 @@ namespace PrintPaymentSystem_Demo
             this.Controls.Add(this.btnAddAmount);
             this.Controls.Add(this.btnShowAccount);
             this.Name = "Form1";
-            this.Text = "Démo du système de payement d\'imprimante";
+            this.Text = "Démo du système de paiement d\'imprimante";
             this.ResumeLayout(false);
             this.PerformLayout();
 

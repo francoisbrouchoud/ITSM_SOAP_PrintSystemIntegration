@@ -17,7 +17,7 @@ namespace DAL
             ConnectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
         }
         /// <summary>
-        /// Permet d'ajouter un montant avec le username
+        /// Permet d'ajouter un montant d'un compte avec son username
         /// </summary>
         /// <param name="username"></param>
         /// <param name="amount"></param>
@@ -43,16 +43,15 @@ namespace DAL
             }
             catch (Exception e)
             {
-
                 throw e;
             }
         }
 
         /// <summary>
-        /// Permet de récupérer le montant d'un compte
+        /// Permet de récupérer le montant d'un compte avec son username
         /// </summary>
         /// <param name="username"></param>
-        /// <returns></returns>
+        /// <returns>Retourne un montant négatif si le compte n'exsite pas.</returns>
         public decimal GetChfByUsername(string username)
         {
             decimal amount = -1;
@@ -75,10 +74,9 @@ namespace DAL
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                throw e;
             }
             return amount;
         }
