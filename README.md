@@ -1,4 +1,4 @@
-# ITSM_SOAP_PrintSystemIntegration/PrintPaymentSystem
+# Print System service with SOAP
 
 This project follows a 3-tier architecture consisting of the Business Logic Layer (BLL), Data Access Layer (DAL), and Data Transfer Objects (DTO). It provides a web service called "PrintPaymentSystem" for managing payments and print accounts in a printing system.
 
